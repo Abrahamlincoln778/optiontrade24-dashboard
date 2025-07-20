@@ -1,10 +1,10 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, EmailStr
 from typing import Optional
 
 # User Schemas
 class UserBase(BaseModel):
     username: str
-    email: str
+    email: EmailStr
 
 class UserCreate(UserBase):
     password: str
@@ -21,7 +21,7 @@ class User(UserBase):
 # Admin Schemas
 class AdminBase(BaseModel):
     username: str
-    email: str
+    email: EmailStr
 
 class AdminCreate(AdminBase):
     password: str
@@ -36,7 +36,16 @@ class Admin(AdminBase):
     class Config:
         from_attributes = True
 
-# Other Schemas
+# Contact Form Schemas
+class ContactBase(BaseModel):
+    name: str
+    email: EmailStr
+    subject: str
+
+class ContactCreate(ContactBase):
+    message: str
+
+# Profit/Financial Schemas
 class ProfitResponse(BaseModel):
     username: str
     balance: float
