@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Admin Dashboard{% endblock %}
+
+{% block content %}
+  <h2>Welcome, Admin</h2>
+
+  <section>
+    <h3>Registered Clients</h3>
+    <ul>
+      {% for client in clients %}
+      <li>{{ client.email }} - Registered on {{ client.registered_at }}</li>
+      {% else %}
+      <li>No clients found.</li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    <h3>Support Messages</h3>
+    <ul>
+      {% for msg in support_messages %}
+      <li><strong>{{ msg.user_email }}:</strong> {{ msg.message }} <em>on {{ msg.created_at }}</em></li>
+      {% else %}
+      <li>No support messages.</li>
+      {% endfor %}
+    </ul>
+  </section>
+{% endblock %}
