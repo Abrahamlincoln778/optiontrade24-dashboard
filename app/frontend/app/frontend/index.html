@@ -1,20 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>OptionTrade24 – Client Dashboard</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OptionTrade24 Dashboard</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #121212;
+      color: #f1f1f1;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #1f2937;
+      padding: 1rem 2rem;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      color: #10b981;
+    }
+    main {
+      padding: 2rem;
+      max-width: 800px;
+      margin: 2rem auto;
+      background-color: #1e293b;
+      border-radius: 8px;
+    }
+    h1 {
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    p {
+      line-height: 1.6;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <h2>Welcome to OptionTrade24</h2>
-    <input type="text" id="email" placeholder="Enter your email" />
-    <button onclick="login()">Login</button>
-
-    <div id="dashboard" style="display:none;">
-      <h3>Your Daily Profit: <span id="profit">$0</span></h3>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
+  <header>OptionTrade24 Dashboard</header>
+  <main>
+    <h1>Welcome to OptionTrade24</h1>
+    <p>Your secure client crypto profit dashboard.</p>
+    <p>Please <a href="/login" style="color:#10b981;">login</a> to access your account.</p>
+  </main>
 </body>
 </html>
